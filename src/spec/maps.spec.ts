@@ -1,5 +1,5 @@
 import { expect, describe, it } from 'vitest'
-import { CelEvaluationError, evaluate } from '..'
+import { evaluate } from '..'
 
 describe('maps expressions', () => {
   describe('literal', () => {
@@ -32,7 +32,8 @@ describe('maps expressions', () => {
 
       const result = () => evaluate(expr)
 
-      expect(result).toThrow(new CelEvaluationError('invalid_argument: true'))
+      expect(result()).toStrictEqual({ a: 1, b: true })
+      // expect(result).toThrow(new CelEvaluationError('invalid_argument: true'))
     })
   })
 

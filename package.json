@@ -1,5 +1,5 @@
 {
-  "name": "cel-js",
+  "name": "@cabloy/cel-js",
   "version": "0.7.1",
   "description": "Common Expression Language (CEL) evaluator for JavaScript",
   "keywords": [

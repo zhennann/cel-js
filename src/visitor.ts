@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-commented-code */
 import { CelParser } from './parser.js'
 
 import {
@@ -289,18 +290,18 @@ export class CelVisitor
     if (!ctx.keyValues) {
       return {}
     }
-    let valueType = ''
+    // let valueType = ''
     for (const keyValuePair of ctx.keyValues) {
       const [key, value] = this.visit(keyValuePair)
-      if (valueType === '') {
-        valueType = getCelType(value)
-      }
+      // if (valueType === '') {
+      //   valueType = getCelType(value)
+      // }
       if (getCelType(key) != CelType.string) {
         throw new CelEvaluationError(`invalid_argument: ${key}`)
       }
-      if (valueType !== getCelType(value)) {
-        throw new CelEvaluationError(`invalid_argument: ${value}`)
-      }
+      // if (valueType !== getCelType(value)) {
+      //   throw new CelEvaluationError(`invalid_argument: ${value}`)
+      // }
       mapExpression[key] = value
     }
 
