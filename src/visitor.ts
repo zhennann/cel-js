@@ -491,18 +491,18 @@ export class CelVisitor
 
     const value = (searchContext as Record<string, unknown>)[identifier]
 
-    if (value === undefined) {
-      const context = JSON.stringify(this?.context)
+    // if (value === undefined) {
+    //   const context = JSON.stringify(this?.context)
 
-      if (context === '{}') {
-        throw new Error(
-          `Identifier "${identifier}" not found, no context passed`,
-        )
-      }
-      throw new Error(
-        `Identifier "${identifier}" not found in context: ${context}`,
-      )
-    }
+    //   if (context === '{}') {
+    //     throw new Error(
+    //       `Identifier "${identifier}" not found, no context passed`,
+    //     )
+    //   }
+    //   throw new Error(
+    //     `Identifier "${identifier}" not found in context: ${context}`,
+    //   )
+    // }
 
     return value
   }
