@@ -61,7 +61,8 @@ const isMap = (value: unknown): value is Record<string, unknown> =>
   getCelType(value) === CelType.map
 
 export const getCelType = (value: unknown): CelType => {
-  if (value === null) {
+  // by zhennann
+  if (value === null || value === undefined) {
     return CelType.null
   }
 
