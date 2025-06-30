@@ -138,7 +138,9 @@ const additionOperation = (left: unknown, right: unknown) => {
     return [...left, ...right]
   }
 
-  throw new CelTypeError(Operations.addition, left, right)
+  // zhennann
+  return (left as string) + right
+  //throw new CelTypeError(Operations.addition, left, right)
 }
 
 const subtractionOperation = (left: unknown, right: unknown) => {
